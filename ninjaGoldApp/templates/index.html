@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ninja Money</title>
+</head>
+<body>
+    <div id="container">
+        <p>Your Money:{{request.session.gold}}</p>
+
+        <form action="process_money" method="POST" class="location">
+            {% csrf_token %}
+            <h4>Farm</h4>
+            <p>Earn 10-20 Gold</p>
+            <input type="hidden" name="location" value="farm">
+            <input type="submit" value="Find Gold">
+        </form>
+        <p>Activities:</p>
+        <div>
+            
+        </div>
+    </div>
+    
+</body>
+</html>
